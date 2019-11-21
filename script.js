@@ -1,23 +1,17 @@
 //A user should be able to see a list of current TO-DO’s
 
-  document.addEventListener("keyup", function(e){
-    
-  if (e.keyCode === 13) {
+  document.addEventListener("keyup", function(e) {
+    if (e.keyCode === 13) {
       const myList = document.getElementById("myList");
-      let newItem = document.createElement("li")
+      let newItem = document.createElement("li");
       newItem.textContent = "";
 
       let inputValue = document.getElementById("enter").value;
-      inputValue = newItem.textContent;
+      newItem.textContent = inputValue;
 
       myList.appendChild(newItem);
-      newItem = appendChild(document.createTextNode(myList));
-
-      
-
-  } else {
-      
-  } 
+    } else {
+    }
   });
 
 
