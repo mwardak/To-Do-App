@@ -19,6 +19,12 @@
 
 
 //A user should be able to mark a TO-DO as completed
+function btn() {
+  if (btn){
+    document.getElementsByClassName("text-decoration:line-through");
+  }
+}
+
 
 // //When a user mark’s a TO-DO as completed the message of the TO-DO should be crossed out (using strikethrough font)
 
@@ -29,16 +35,3 @@
 
 
 
-//   let input = document.getElementById("input");
-//   let item = input.value;
-
-//   // ol = document.getElementById("list");
-
-//   let textnode = document.createTextNode(item).appendChild;
-
-//   if (item){
-//       textnode;
-//   } else {
-        
-//   }
-// }
