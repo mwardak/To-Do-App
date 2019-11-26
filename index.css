@@ -29,3 +29,7 @@ body {
   border: 3px solid #333;
   
 }
+
+ol.done > li > span {
+  text-decoration: line-through;
+}

@@ -6,12 +6,17 @@
       let newItem = document.createElement("li");
       newItem.textContent = "";
 
-      let inputValue = document.getElementById("enter").value;
-      newItem.textContent = inputValue;
+      
 
-      myList.appendChild(newItem);
-    } else {
-    }
+      let inputValue = document.getElementById("enter").value;
+      // newItem.textContent = inputValue;
+
+      const span = document.createElement("span");
+      span.className = "item-text";
+      span.textContent = inputValue;
+
+      myList.appendChild(span);
+    } 
   });
 
 
@@ -20,10 +25,9 @@
 
 //A user should be able to mark a TO-DO as completed
   myList.addEventListener("click", function(e){
-
-  if(e){
-    e.target.parentElement.style.textDecoration = "line-through";
-  }
+  
+  e.target.parentElement.className = "done";
+  
 
 });
 
