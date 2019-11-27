@@ -30,6 +30,7 @@ body {
   
 }
 
+/* /When a user mark’s a TO-DO as completed the message of the TO-DO should be crossed out (using strikethrough font) */ 
 ol.done > li > span {
   text-decoration: line-through;
 }
