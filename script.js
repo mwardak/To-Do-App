@@ -1,5 +1,4 @@
 //A user should be able to see a list of current TO-DO’s
-newItem ="";
 
 document.addEventListener("keyup", function(e) {
   if (e.keyCode === 13) {
@@ -37,25 +36,23 @@ document.addEventListener("keyup", function(e) {
 myList.addEventListener("click", function(e) {
   if (e.target.nodeName === "SPAN") {
     e.target.parentElement.className = "done";
-  } 
+  }
 });
 
 // A user should have the option of deleting
-
+let clearAllBtn = document.getElementById("btn");
 // const clearAllBtn = document.getElementById("btn");
 clearAllBtn.addEventListener("click", function(e) {
-// store the <ol></ol> element in a variable
-const myList = document.getElementById("myList");
-clearAllBtn.setAttribute("type", "button");
-// loop through each child element
-for (let i = 0; i < myList.childNodes.length; i++) {
-  const childNode = myList.ChildNodes[i];
-  if (childNode === false ) {
-// set display = none
-    myList.style = "display: none";
+  clearAllBtn.setAttribute("type", "button");
+  // store the <ol></ol> element in a variable
+  const myList = document.getElementById("myList");
+
+  // loop through each child element
+  for (let i = 0; i < myList.childNodes.length; i++) {
+    const childNode = myList.childNodes[i];
+    if (childNode.nodeName === "LI") {
+      // set display = none
+      childNode.style = "display: none";
+    }
   }
-}
-
 });
-
-
